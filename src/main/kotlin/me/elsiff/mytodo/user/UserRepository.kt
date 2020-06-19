@@ -1,10 +1,12 @@
 package me.elsiff.mytodo.user
 
-import me.elsiff.mytodo.user.User
-import org.springframework.data.mongodb.core.*
+import org.springframework.data.mongodb.core.ReactiveMongoTemplate
+import org.springframework.data.mongodb.core.findAll
+import org.springframework.data.mongodb.core.findOne
 import org.springframework.data.mongodb.core.query.Criteria.where
 import org.springframework.data.mongodb.core.query.Query
 import org.springframework.data.mongodb.core.query.isEqualTo
+import org.springframework.data.mongodb.core.remove
 import org.springframework.stereotype.Repository
 import reactor.core.publisher.Mono
 

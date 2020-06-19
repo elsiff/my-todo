@@ -1,6 +1,5 @@
 package me.elsiff.mytodo.user
 
-import org.springframework.security.core.userdetails.UserDetails
 import org.springframework.stereotype.Service
 import reactor.core.publisher.Mono
 import reactor.kotlin.core.publisher.toMono
@@ -23,10 +22,6 @@ class UserServiceImpl(
 
     override fun deleteUser(username: String) =
         userRepository.deleteByUsername(username).map { it.deletedCount > 0 }
-
-    override fun loadUserByUsername(username: String): UserDetails {
-        return TODO()
-    }
 
     @PostConstruct
     fun initializeRepository() =

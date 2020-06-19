@@ -1,6 +1,5 @@
 package me.elsiff.mytodo.user
 
-import me.elsiff.mytodo.user.UserHandler
 import org.springframework.context.annotation.Bean
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.router
