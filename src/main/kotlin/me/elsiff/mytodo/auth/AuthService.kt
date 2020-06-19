@@ -1,5 +1,6 @@
-package me.elsiff.mytodo
+package me.elsiff.mytodo.auth
 
+import me.elsiff.mytodo.user.User
 import reactor.core.publisher.Mono
 
 /**

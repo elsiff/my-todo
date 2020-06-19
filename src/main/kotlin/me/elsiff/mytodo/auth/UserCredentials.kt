@@ -1,4 +1,4 @@
-package me.elsiff.mytodo
+package me.elsiff.mytodo.auth
 
 /**
  * Created by elsiff on 2020-06-11.

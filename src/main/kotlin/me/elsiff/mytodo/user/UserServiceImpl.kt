@@ -1,7 +1,6 @@
-package me.elsiff.mytodo
+package me.elsiff.mytodo.user
 
 import org.springframework.security.core.userdetails.UserDetails
-import org.springframework.security.crypto.password.PasswordEncoder
 import org.springframework.stereotype.Service
 import reactor.core.publisher.Mono
 import reactor.kotlin.core.publisher.toMono
@@ -37,7 +36,7 @@ class UserServiceImpl(
 
     companion object {
         val INITIAL_USERS: List<User> = listOf(
-            User("admin", "admin", "admin@my-todo.elsiff.me")
+                User("admin", "admin", "admin@my-todo.elsiff.me")
         )
     }
 }

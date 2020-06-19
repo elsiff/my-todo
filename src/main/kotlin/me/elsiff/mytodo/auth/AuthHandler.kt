@@ -1,4 +1,4 @@
-package me.elsiff.mytodo
+package me.elsiff.mytodo.auth
 
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest

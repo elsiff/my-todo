@@ -1,5 +1,6 @@
-package me.elsiff.mytodo
+package me.elsiff.mytodo.user
 
+import me.elsiff.mytodo.user.User
 import org.springframework.security.core.userdetails.UserDetailsService
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono

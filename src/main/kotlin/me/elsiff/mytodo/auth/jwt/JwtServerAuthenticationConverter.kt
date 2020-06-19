@@ -1,4 +1,4 @@
-package me.elsiff.mytodo
+package me.elsiff.mytodo.auth.jwt
 
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken
 import org.springframework.security.core.Authentication

@@ -1,5 +1,7 @@
 package me.elsiff.mytodo
 
+import me.elsiff.mytodo.auth.jwt.JwtAuthenticationManager
+import me.elsiff.mytodo.auth.jwt.JwtServerAuthenticationConverter
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.security.config.web.server.SecurityWebFiltersOrder
@@ -14,9 +16,9 @@ import org.springframework.security.web.server.authentication.AuthenticationWebF
 class SecurityConfig {
     @Bean
     fun securityWebFilterChain(
-        http: ServerHttpSecurity,
-        jwtAuthenticationManager: JwtAuthenticationManager,
-        jwtServerAuthenticationConverter: JwtServerAuthenticationConverter
+            http: ServerHttpSecurity,
+            jwtAuthenticationManager: JwtAuthenticationManager,
+            jwtServerAuthenticationConverter: JwtServerAuthenticationConverter
     ): SecurityWebFilterChain {
         val authenticationWebFilter = AuthenticationWebFilter(jwtAuthenticationManager)
         authenticationWebFilter.setServerAuthenticationConverter(jwtServerAuthenticationConverter)

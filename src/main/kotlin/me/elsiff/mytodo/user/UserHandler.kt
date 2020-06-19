@@ -1,4 +1,4 @@
-package me.elsiff.mytodo
+package me.elsiff.mytodo.user
 
 import org.springframework.http.HttpStatus
 import org.springframework.stereotype.Component

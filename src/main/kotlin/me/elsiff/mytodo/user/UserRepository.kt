@@ -1,5 +1,6 @@
-package me.elsiff.mytodo
+package me.elsiff.mytodo.user
 
+import me.elsiff.mytodo.user.User
 import org.springframework.data.mongodb.core.*
 import org.springframework.data.mongodb.core.query.Criteria.where
 import org.springframework.data.mongodb.core.query.Query

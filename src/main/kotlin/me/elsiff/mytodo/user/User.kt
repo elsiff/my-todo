@@ -1,4 +1,4 @@
-package me.elsiff.mytodo
+package me.elsiff.mytodo.user
 
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
