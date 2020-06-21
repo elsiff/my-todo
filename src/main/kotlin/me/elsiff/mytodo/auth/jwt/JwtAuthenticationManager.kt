@@ -1,5 +1,6 @@
 package me.elsiff.mytodo.auth.jwt
 
+import org.springframework.security.authentication.AuthenticationCredentialsNotFoundException
 import org.springframework.security.authentication.ReactiveAuthenticationManager
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken
 import org.springframework.security.core.Authentication
@@ -17,7 +18,11 @@ class JwtAuthenticationManager(
     override fun authenticate(authentication: Authentication): Mono<Authentication> {
         return Mono.just(authentication)
             .map { jwtSigner.validateJwt(it.credentials as String) }
-            .onErrorResume { Mono.empty() }
+            .onErrorResume { error ->
+                Mono.error(
+                    AuthenticationCredentialsNotFoundException(error.message, error)
+                )
+            }
             .map { jws ->
                 UsernamePasswordAuthenticationToken(
                     jws.body.subject,
