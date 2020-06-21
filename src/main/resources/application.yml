@@ -5,3 +5,4 @@ spring:
       database: "my-todo"
   jackson:
     default-property-inclusion: non_null
+jwt.secret: "x2oxrJ8biUS1k3ODgQzfAsDUYf9kSfjO"
