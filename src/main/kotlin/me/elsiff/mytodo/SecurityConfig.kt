@@ -32,6 +32,8 @@ class SecurityConfig {
             .permitAll()
             .pathMatchers("/users/**")
             .authenticated()
+            .pathMatchers("/tasks/**")
+            .authenticated()
             .and()
             .addFilterAt(authenticationWebFilter, SecurityWebFiltersOrder.AUTHENTICATION)
             .httpBasic()
